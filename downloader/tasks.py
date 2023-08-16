@@ -10,8 +10,6 @@ SAVE_PATH = './data'
 
 @celery_app.task
 def download_channel_videos(channel_id):
-    print(channel_id)
-    logging.info('This is an info message')
     ydl_opts = {
         'ignoreerrors': True,
         'format': 'best',
